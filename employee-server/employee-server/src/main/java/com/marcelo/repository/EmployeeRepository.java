@@ -1,2 +1,9 @@
-package com.marcelo.repository;public interface EmployeeRepository {
+
+package com.marcelo.repository;
+
+import com.marcelo.entity.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 }

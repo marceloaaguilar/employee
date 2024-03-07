@@ -1,9 +1,19 @@
 import logo from './logo.svg';
+import {Route, Routes} from 'react-router-dom';
 import './App.css';
+import Header from "./pages/header/Header";
+import Dashboard from "./pages/dashboard/Dashboard";
+import NoMatch from "./pages/noMatch/NoMatch";
 
 function App() {
   return (
-    <h1 class="text-center">Hello World</h1>
+    <>
+    <Header />
+      <Routes>
+        <Route path="/" element ={<Dashboard/>} />
+        <Route path="*" element ={<NoMatch/>} />
+      </Routes>
+    </>
   );
 }
 
